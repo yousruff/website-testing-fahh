@@ -78,7 +78,18 @@
 </main>
 
 <!-- Klaviyo tracking script — this alone is what triggers the popup form -->
-<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/SaB5s3/klaviyo.js?company_id=SaB5s3"></script>
+// Replace PUBLIC_API_KEY with your real public API key.
+<script
+  async type="text/javascript"
+  src="//static.klaviyo.com/onsite/js/PUBLIC_API_KEY/klaviyo.js"
+></script>
+
+<script>
+  klaviyo.identify({
+    // Change the line below to dynamically print the user's email.
+    'email' : '{{ email }}'
+  });
+</script>
 
 </body>
 </html>
